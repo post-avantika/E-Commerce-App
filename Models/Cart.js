@@ -30,10 +30,6 @@ const CartSchema=new Schema({
         type:Number,
         required:true
     },
-    date_added:{
-        type:Date,
-        default:Date.now
-    }
 });
 
 const Cart=mongoose.Model('cart',CartSchema);
