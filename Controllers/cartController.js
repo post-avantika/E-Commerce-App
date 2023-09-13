@@ -5,7 +5,7 @@ export const get_cart_items= async(req,res)=>{
     const userId=req.params.id;
     try{
         let cart=await Cart.findOne({userId});
-        if(cart && items.length>0){
+        if(cart && cart.items.length>0){
             res.send(cart);
 
         } else{
